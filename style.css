@@ -1,0 +1,225 @@
+/* ========================================================
+   대한민국 육군 국방인사정보체계(DIMS) 인트라넷 테마 스타일
+   ======================================================== */
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+:root {
+  /* 육군 공식 고유 컬러 */
+  --army-dark: #0a140d;
+  --army-card: #122318;
+  --army-card-border: #1e3d29;
+  --army-green-primary: #194d33;
+  --army-green-hover: #216342;
+  --army-green-light: #2d8a5b;
+  --army-gold: #c5a059;
+  --army-gold-light: #e6ca85;
+  --army-amber: #d97706;
+  --army-red: #b91c1c;
+  --army-blue: #1d4ed8;
+  --army-text-main: #f1f5f2;
+  --army-text-sub: #9caea3;
+}
+
+body {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Malgun Gothic", sans-serif;
+  background-color: var(--army-dark);
+  color: var(--army-text-main);
+  min-height: 100vh;
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(25, 77, 51, 0.25) 0%, transparent 60%),
+    linear-gradient(rgba(10, 20, 13, 0.98), rgba(10, 20, 13, 0.98));
+}
+
+/* 국방망 격자 배경 패턴 */
+.grid-bg-overlay {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(30, 61, 41, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(30, 61, 41, 0.25) 1px, transparent 1px);
+}
+
+/* 커스텀 밀리터리 스크롤바 */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #0d1a12;
+}
+::-webkit-scrollbar-thumb {
+  background: #254a32;
+  border-radius: 3px;
+  border: 1px solid rgba(197, 160, 89, 0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #366b49;
+}
+
+/* 국방 보안 최상단 띠 */
+.security-top-strip {
+  background: repeating-linear-gradient(
+    -45deg,
+    #132b1d,
+    #132b1d 15px,
+    #193a27 15px,
+    #193a27 30px
+  );
+  border-bottom: 2px solid var(--army-gold);
+}
+
+/* 카드 및 박스 */
+.army-card {
+  background-color: rgba(18, 35, 24, 0.92);
+  border: 1px solid var(--army-card-border);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.6);
+}
+
+.army-card:hover {
+  border-color: rgba(197, 160, 89, 0.45);
+}
+
+/* 텍티컬 헤더/타이틀 바 */
+.army-header-bar {
+  background: linear-gradient(180deg, #183323 0%, #102418 100%);
+  border-bottom: 1px solid var(--army-card-border);
+}
+
+/* 밀리터리 뱃지 */
+.badge-status {
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: inherit;
+}
+
+.badge-present {
+  background-color: rgba(16, 185, 129, 0.18);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.45);
+}
+
+.badge-vacation {
+  background-color: rgba(59, 130, 246, 0.18);
+  color: #60a5fa;
+  border: 1px solid rgba(59, 130, 246, 0.45);
+}
+
+.badge-outing {
+  background-color: rgba(6, 182, 212, 0.18);
+  color: #38bdf8;
+  border: 1px solid rgba(6, 182, 212, 0.45);
+}
+
+.badge-stayout {
+  background-color: rgba(168, 85, 247, 0.18);
+  color: #c084fc;
+  border: 1px solid rgba(168, 85, 247, 0.45);
+}
+
+.badge-patient {
+  background-color: rgba(239, 68, 68, 0.18);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.45);
+}
+
+.badge-etc {
+  background-color: rgba(245, 158, 11, 0.18);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.45);
+}
+
+/* 국방 인장/도장 효과 (승인 완료 마크) */
+.military-stamp {
+  border: 2px solid #10b981;
+  color: #10b981;
+  padding: 2px 6px;
+  font-weight: 800;
+  font-size: 0.65rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  transform: rotate(-3deg);
+  background: rgba(16, 185, 129, 0.1);
+}
+
+/* 국방 금색 버튼 */
+.btn-army-gold {
+  background: linear-gradient(135deg, #c5a059 0%, #a6843e 100%);
+  color: #0d1a12;
+  font-weight: 700;
+  border: 1px solid #e6ca85;
+}
+.btn-army-gold:hover {
+  background: linear-gradient(135deg, #d6b36a 0%, #b8954d 100%);
+  box-shadow: 0 0 15px rgba(197, 160, 89, 0.4);
+}
+
+/* 국방 그린 버튼 */
+.btn-army-green {
+  background: linear-gradient(135deg, #1f5e3e 0%, #15452d 100%);
+  color: #ffffff;
+  border: 1px solid #2d8a5b;
+}
+.btn-army-green:hover {
+  background: linear-gradient(135deg, #27774e 0%, #1c5c3c 100%);
+  box-shadow: 0 0 15px rgba(45, 138, 91, 0.35);
+}
+
+/* 모달 애니메이션 */
+.modal-backdrop {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.modal-content {
+  animation: modalSlideDown 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes modalSlideDown {
+  0% {
+    opacity: 0;
+    transform: scale(0.96) translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* 국방 공문서 텍스트 영역 */
+.military-document-view {
+  background-color: #0b140e;
+  border: 1px solid #234831;
+  color: #e2e8f0;
+  font-family: 'Pretendard', monospace;
+  line-height: 1.65;
+}
+
+/* 국방망 인증 펄스 */
+.secure-pulse {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  animation: securePulseAnim 2s infinite;
+}
+
+@keyframes securePulseAnim {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 7px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
